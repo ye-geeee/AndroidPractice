@@ -1,1 +1,1 @@
-This is repositories for android tutorial.
+This is a repository for android tutorial.
