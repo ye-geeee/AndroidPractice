@@ -2,12 +2,12 @@
 
 [Sample Code](../06_Event)
 
-- Delegation Event Model(#Delegation-Event-Model)
-- Hierachy Event Model(#Hierachy-Event-Model)
+- [Delegation Event Model](#Delegation-Event-Model)
+- [Hierachy Event Model](#Hierachy-Event-Model)
 
 ## Delegation Event Model
 
-Event Source -----(Listener)-----> Event Handler
+Event Source -----(Listener)-----> Event Handler  
 위와 같은 구주로, Gof 디자인 패턴의 Observer Pattern이라고 볼 수 있습니다.
 
 샘플 코드는 아래와 같습니다.
