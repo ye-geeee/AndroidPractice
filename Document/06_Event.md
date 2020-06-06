@@ -12,7 +12,7 @@ Event Source -----(Listener)-----> Event Handler
 
 샘플 코드는 아래와 같습니다.
 
-``` java
+```java
 sampleCheckView.setOnCheckedChangeListener(new MyEventHandler());
 
 class MyEventHandler implements CompoundButton.OnCheckedChangeListener{
@@ -24,7 +24,7 @@ class MyEventHandler implements CompoundButton.OnCheckedChangeListener{
 
 위의 코드는 안드로이드에서 자주 볼 수 있는 아래와 같은 코드와 동일한 의미이다.
 
-``` java
+```java
 sampleCheckView.setOnCheckedChangeListener(new OnCheckedChangeListener(){
     @Ovrride
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {}
@@ -43,7 +43,7 @@ sampleCheckView.setOnCheckedChangeListener(new OnCheckedChangeListener(){
 - ACTION_UP: 화면에서 터치를 떼는 순간 이벤트
 - ACTION_MOVE: 터치한 후 이동하는 순간 이벤트
 
-``` java
+```java
 @Override
 public boolean onTouchEvent(MotionEvent event){
     if(event.getAction()==MotionEvent.ACTION_DOWN){
@@ -58,7 +58,7 @@ public boolean onTouchEvent(MotionEvent event){
 사용자의 안드로이드 키보드는 이벤트를 처리할 수 없습니다.  
 Key Event를 통해서는 안드로이드 하단의 버튼 이벤트를 처리하는 데에 사용합니다.
 
-``` java
+```java
 @Override
 public boolean onKeyDown(int keyCode, KeyEvent event){
     if(keyCode==KeyEvent.KEYCODE_BACK){}

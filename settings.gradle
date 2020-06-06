@@ -1,2 +1,2 @@
-include ':app', ':05_Alarm', ':06_Event'
+include ':app', ':05_Alarm', ':06_Event', ':07_Resource'
 rootProject.name='AndroidPractice'
