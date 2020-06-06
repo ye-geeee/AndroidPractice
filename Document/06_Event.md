@@ -36,7 +36,7 @@ sampleCheckView.setOnCheckedChangeListener(new OnCheckedChangeListener(){
 
 ### Touch Event
 
-사용자가 액티비티 내에서 손가락으로 조작하는 일을 처리하는 이벤트입니다.
+사용자가 액티비티 내에서 손가락으로 조작하는 일을 처리하는 이벤트입니다.  
 사용자가 손가락으로 상하좌우 어떤 방향으로 밀었는지 알아내는 것 또한 가능합니다.
 
 - ACTION_DOWN: 화면이 터치된 순간 이벤트
@@ -55,7 +55,7 @@ public boolean onTouchEvent(MotionEvent event){
 
 ### Key Event
 
-사용자의 안드로이드 키보드는 이벤트를 처리할 수 없습니다.
+사용자의 안드로이드 키보드는 이벤트를 처리할 수 없습니다.  
 Key Event를 통해서는 안드로이드 하단의 버튼 이벤트를 처리하는 데에 사용합니다.
 
 ``` java
