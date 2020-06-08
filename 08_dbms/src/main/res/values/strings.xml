@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">08_DBMS</string>
+    <string name="title_activity_read_db">ReadDBActivity</string>
+    <string name="title_activity_realm_read">RealmReadActivity</string>
+</resources>
