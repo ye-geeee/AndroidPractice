@@ -1,5 +1,7 @@
 # DBMS을 이용한 데이터 영속화
 
+[Sample Code](../08_dbms)
+
 ## SQLite 이용
 
 ### SQLiteDatabase
@@ -32,4 +34,42 @@ SQLiteDatabase db = helper.getWritableDatabase();
 ```
 
 ## REALM 이용
+
+Realm은 안드로이드 표준에서 제공하는 것이 아니라, 오픈소스로 만들어지고 있는 데이터베이스입니다.  
+
+###  Realm 사용 설정
+
+Realm을 사용하기 위해서는 프로젝트 수준의 `build.gradle`을 수정해야 합니다.  
+아래와 같이 의존성을 주입해줍니다.
+
+ ```properties
+ dependencies{
+    classpath 'com.android.tools.build:gradle:3.2.1'
+    classpath 'io.realm:realm-gradle-plugin:3.5.0'
+ }
+ ```
+ 
+### 데이터 삽입
+
+저장할 VO Class는 아래와 같이 `RealmObject`를 상속받아야 합니다.
+
+```java
+public class MemoVO extends RealObject{};
+```
+
+Realm을 이용하여 데이터를 저장하는 방법은 아래와 같습니다.  
+생성한 `RealmObject` class를 사용하여 `createObject` 함수를 통해 데이터를 저장합니다.  
+
+```java
+Realm.init(this);
+Realm mRealm = Realm.getDefaultInstance();
+
+mRealm.executeTransition(new Realm.Transaction(){
+    @Override
+    public void execute(Realm realm){
+        MemoVO vo = realm.createObject(MemoVO.class);
+    }
+});
+```
+
 
