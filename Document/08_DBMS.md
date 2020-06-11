@@ -92,3 +92,11 @@ MemoVO vo = mRealm.where(MemoVO.class).equalTo("title", "hello").findFirst();
 ```java
 RealmResults<MemoVO> results = mRealm.where(MemoVO.class).equalTo("title", "hello").findAll();
 ```
+
+### 데이터 삭제
+
+데이터 삭제는 아래와 같이 `delete` 함수를 이용합니다. 
+
+```java
+mRealm.delete(MemoVo.class);
+```
