@@ -72,4 +72,23 @@ mRealm.executeTransition(new Realm.Transaction(){
 });
 ```
 
+### 데이터 획득
 
+저장된 데이터를 획득하기 위해서는 아래와 같은 코드를 사용합니다.    
+
+```java
+MemoVO vo = mRealm.where(MemoVO.class).equalTo("title", "hello").findFirst();
+```
+
+`mRealm.where(...)`이 반환하는 객체는 `RealmQuery`이며, 다양한 findXXX함수를 제공합니다. 
+- findAll()
+- findAllSorted(String fieldName, Sort sortOrder)
+- findAllSorted(String[] fieldNames, Sort[] sortOrder)
+- findAllSorted(String fieldName1, Sort sortOrder1, String fieldName2, Sort sortOrder2)
+- findFirst()
+
+데이터가 여러건이면 `RealmResults` 타입으로 획득 가능합니다.  
+
+```java
+RealmResults<MemoVO> results = mRealm.where(MemoVO.class).equalTo("title", "hello").findAll();
+```
